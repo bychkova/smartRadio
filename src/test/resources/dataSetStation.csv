@@ -1,0 +1,5 @@
+setBottomBorder, 0, 0
+setTopBorder, 9, 9
+setUnderBottonBorder, -1, 0
+setAboveTopBorder, 10, 0
+setBetweenBorders, 3, 3
