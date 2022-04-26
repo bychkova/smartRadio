@@ -3,19 +3,44 @@ package ru.netology.domain;
 public class Radio {
     private int station;
     private int volume;
+    private int stationsAmount = 10;
+    private int minStation = 0;
+    private int minVolume = 0;
+    private int maxVolume = 100;
+    /*т.к. в задании не указано, будем считать, что минимально возможное кол-во станций = 1
+                                                    максимально возможное = 50 */
+    private int minStationsAmount = 1;
+    private int maxStationsAmoumt = 50;
+
+    public Radio(int customStationsAmount) {
+        if (customStationsAmount < minStationsAmount) {
+            customStationsAmount = stationsAmount;
+        }
+        if (customStationsAmount > maxStationsAmoumt) {
+            customStationsAmount = stationsAmount;
+        }
+        this.stationsAmount = customStationsAmount;
+    }
+
+    public Radio() {
+    }
 
     public int getStation() {
         return station;
     }
 
     public void setStation(int station) {
-        if (station < 0) {
+        if (station < minStation) {
             return;
         }
-        if (station > 9) {
+        if (station > (stationsAmount - 1)) {
             return;
         }
         this.station = station;
+    }
+
+    public int getStationsAmount() {
+        return stationsAmount;
     }
 
     public int getVolume() {
@@ -23,33 +48,33 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-        if (volume < 0) {
+        if (volume < minVolume) {
             return;
         }
-        if (volume > 10) {
+        if (volume > maxVolume) {
             return;
         }
         this.volume = volume;
     }
 
     public void nextStation() {
-        if (station == 9) {
-            setStation(0);
+        if (station == (stationsAmount - 1)) {
+            setStation(minStation);
         } else {
             setStation(station + 1);
         }
     }
 
     public void prevStation() {
-        if (station == 0) {
-            setStation(9);
+        if (station == minStation) {
+            setStation(stationsAmount - 1);
         } else {
             setStation(station - 1);
         }
     }
 
     public void increaseVolume() {
-        if (volume < 10) {
+        if (volume < maxVolume) {
             setVolume(volume + 1);
         } else {
             setVolume(volume);
@@ -57,7 +82,7 @@ public class Radio {
     }
 
     public void decreaseVolume() {
-        if (volume > 0) {
+        if (volume > minVolume) {
             setVolume(volume - 1);
         } else {
             setVolume(volume);
