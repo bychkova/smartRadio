@@ -1,5 +1,11 @@
-setBottomBorder, 0, 0
-setTopBorder, 9, 9
-setUnderBottonBorder, -1, 0
-setAboveTopBorder, 10, 0
-setBetweenBorders, 3, 3
+setBottomBorderDefaulRadio, 10, 0, 0
+setBetweenBordersDefaulRadio, 10, 4, 4
+setTopBorderDefaulRadio, 10, 9, 9
+setAboveTopBorderDefaulRadio, 10, 10, 0
+setBottomBorderCustomRadioMax, 50, 0, 0
+setBetweenBordersCustomRadioMax, 50, 4, 4
+setTopBorderCustomRadioMax, 50, 49, 49
+setAboveTopBorderCustomRadioMax, 50, 50, 0
+setBorderCustomRadioMin, 1, 0, 0
+setAboveBorderCustomRadioMin, 1, 1, 0
+

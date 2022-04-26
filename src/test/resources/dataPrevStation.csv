@@ -1,3 +1,6 @@
-prevBottomBorder, 0, 9
-prevTopBorder, 9, 8
-prevBetweenBorders, 1, 0
+prevBottomBorderDefaulRadio, 10, 0, 9
+prevTopBorderDefaulRadio, 10, 9, 8
+prevBetweenBordersDefaulRadio, 10, 4, 3
+prevBottomBorderCustomRadio, 50, 0, 49
+prevBetweenBordersCustomRadio, 50, 4, 3
+prevCustomRadioMin, 1, 0, 0

@@ -33,7 +33,7 @@ public class Radio {
         if (station < minStation) {
             return;
         }
-        if (station > stationsAmount) {
+        if (station > (stationsAmount - 1)) {
             return;
         }
         this.station = station;

@@ -1,3 +1,6 @@
-nextBottomBorder, 0, 1
-nextTopBorder, 9, 0
-nextBetweenBorders, 4, 5
+nextBottomBorderDefaulRadio, 10, 0, 1
+nextTopBorderDefaulRadio, 10, 9, 0
+nextBetweenBordersDefaulRadio, 10, 4, 5
+nextTopBorderCustomRadioMax, 50, 49, 0
+nextBetweenBordersCustomRadioMax, 50, 4, 5
+nextCustomRadioMin, 1, 0, 0
