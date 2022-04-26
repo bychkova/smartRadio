@@ -7,12 +7,22 @@ public class Radio {
     private int minStation = 0;
     private int minVolume = 0;
     private int maxVolume = 100;
+    /*т.к. в задании не указано, будем считать, что минимально возможное кол-во станций = 1
+                                                    максимально возможное = 50 */
+    private int minStationsAmount = 1;
+    private int maxStationsAmoumt = 50;
 
-    public Radio (int stationsAmount){
-        this.stationsAmount = stationsAmount;
+    public Radio(int customStationsAmount) {
+        if (customStationsAmount < minStationsAmount) {
+            customStationsAmount = stationsAmount;
+        }
+        if (customStationsAmount > maxStationsAmoumt) {
+            customStationsAmount = stationsAmount;
+        }
+        this.stationsAmount = customStationsAmount;
     }
 
-    public Radio (){
+    public Radio() {
     }
 
     public int getStation() {
@@ -27,6 +37,10 @@ public class Radio {
             return;
         }
         this.station = station;
+    }
+
+    public int getStationsAmount() {
+        return stationsAmount;
     }
 
     public int getVolume() {

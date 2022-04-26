@@ -9,16 +9,25 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-    @ParameterizedTest
-    @CsvFileSource(resources = "/dataSetStation.csv")
-    void shouldCreateDefaultRadio(String testName, int station, int expected) {
+    @Test
+    void shouldCreateDefaultRadio() {
         Radio radio = new Radio();
 
-        int actual = radio.getStation();
+        int actual = radio.getStationsAmount();
+        int expected = 10;
 
         assertEquals(actual, expected);
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/dataSetStation.csv")
+    void shouldSetStationsAmount(String testName, int stationsAmount, int expected) {
+        Radio radio = new Radio(stationsAmount);
+
+        int actual = radio.getStationsAmount();
+
+        assertEquals(actual, expected);
+    }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/dataSetStation.csv")
