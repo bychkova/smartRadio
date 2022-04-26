@@ -11,6 +11,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/dataSetStation.csv")
+    void shouldCreateDefaultRadio(String testName, int station, int expected) {
+        Radio radio = new Radio();
+
+        int actual = radio.getStation();
+
+        assertEquals(actual, expected);
+    }
+
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/dataSetStation.csv")
     void shouldSetStation(String testName, int station, int expected) {
         Radio radio = new Radio();
         radio.setStation(station);
