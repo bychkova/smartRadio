@@ -20,7 +20,7 @@ class RadioTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/dataSetStation.csv")
+    @CsvFileSource(resources = "/dataSetStationsAmount.csv")
     void shouldSetStationsAmount(String testName, int stationsAmount, int expected) {
         Radio radio = new Radio(stationsAmount);
 
